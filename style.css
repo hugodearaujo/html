@@ -11,9 +11,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0F1016; /* Fundo levemente mais claro */
+    background-color: #0F1016;
 }
-
 
 .barra-de-busca {
     display: flex;
@@ -31,15 +30,64 @@
     color: white;
     width: 100%;
     padding-left: 5px;
-    font-size: 14px;
 }
 
 .barra-de-busca .icone-de-busca {
     margin-left: 8px;
     color: white;
 }
+
 .icone-menu {
     font-size: 24px;
     color: white;
     cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 300px;
+    background-color: #1E1F26;
+    overflow-y: auto;
+    transition: all 0.3s;
+    padding-top: 20px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #88C0D0;
+}
+
+main {
+    padding: 20px;
+    color: white;
+}
+
+.footer {
+    background-color: #0F1016;
+    padding: 10px;
+    text-align: center;
+    color: white;
 }
