@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <header>
+        <div class="barra-de-busca">
+            <input type="text" placeholder="Pesquise aqui">
+            <span class="icone-de-busca">🔍</span>
+        </div>
+        <div class="icone-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Em Alta</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Entretenimento</a></li>
+                <li><a href="#">Segurança</a></li>
+                <li><a href="#">Nacional</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Conteúdo Principal</h1>
+        <p>Este é o conteúdo principal do site.</p>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Jornalismo da Certa. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Fechar o menu se clicar fora dele
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuIcon = document.querySelector('.menu-icon');
+
+            if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
